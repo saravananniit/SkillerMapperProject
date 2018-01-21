@@ -14,6 +14,8 @@ public class Employee {
 		return id;
 	}
 	
+	//this is an model for database program
+	
 	public void setId(int id) {
 		this.id = id;
 	}
