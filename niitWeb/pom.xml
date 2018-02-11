@@ -14,15 +14,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-  <dependency>
+      <dependency>
     <groupId>com.niit</groupId>
   <artifactId>niitMethod</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <scope>system</scope>
-	<systemPath>${basedir}/lib/niitMethod-0.0.1-SNAPSHOT.jar</systemPath>
+      </dependency>
     
-  </dependency>
-   
      </dependencies>
   <build>
     <finalName>niitWeb</finalName>
