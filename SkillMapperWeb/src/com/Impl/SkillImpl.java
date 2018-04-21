@@ -15,5 +15,7 @@ public interface SkillImpl {
 			String lang_known);
 	public List<Skill> displaySkill();
 	public String deleteSkill(int s);
+	public int updateSkills(int empid, String status, String remarks);
+	public List<Skill>  getSkillsByStatus();
 
 }

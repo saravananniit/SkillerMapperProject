@@ -6,6 +6,7 @@ import java.util.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.*;
+
 import com.DBConnection.connect;
 import com.Impl.*;
 import com.Model.Skill;
@@ -116,6 +117,12 @@ public class SkillDAO implements SkillImpl {
 		return s;
 	}
 
+	
+	
+	
+	
+	
+	
 	@Override
 	public String deleteSkill(int s) {
 		String x="fail";
@@ -129,7 +136,92 @@ public class SkillDAO implements SkillImpl {
 			}catch(Exception e){ System.out.println(e);}  
 			  
 		return x;
-			}  
+			}
+
+	@Override
+	public int updateSkills(int empid, String status, String remarks) {
+		// TODO Auto-generated method stub
+	//	return 0;
+		String dataToUpdate="R";
+		int rows=0;
+		if(status.equals("Accepted"))
+			dataToUpdate="A";
+		
+		try(PreparedStatement stmt=db.prepareStatement("update users set status=?,remarks=? where Emp_id=?");
+				
+				
+					
+			   )
+			{
+				
+			
+			stmt.setString(1,dataToUpdate);
+			stmt.setString(2, remarks);
+			stmt.setInt(3, empid);
+			
+				rows=stmt.executeUpdate();
+				
+			}               
+			catch(SQLException exe)
+			{
+				exe.printStackTrace();
+			}
+			
+		return rows;
+		
+		
+		
+
+	
+	}
+
+	@Override
+	public List<Skill> getSkillsByStatus() {
+		// TODO Auto-generated method stub
+	//	return null;
+		ResultSet rs=null;
+//		List<Skill> s=new LinkedList<Skill>();
+		List<Skill> skillList=new LinkedList<Skill>();
+
+		try
+		{
+		st=db.createStatement();
+//		String sql = "SELECT * FROM SKILLS";
+		String sql="select a.Emp_Id,Skills,Certification,teaching_hours,trained_no_of_stdnts,skill_rating,no_of_stdnts_plcd,yrs_of_expr,lang_known from Skills a join users b  on a.emp_id = b.emp_id where b.status='N'";
+		rs=st.executeQuery(sql);
+	//	rs
+//		int i= st.executeUpdate(sql);
+	//	System.out.println(i+"no of rows affected");
+			while(rs.next())
+			{
+				System.out.println(rs);	
+				Skill skills=new Skill();
+				skills.setEmp_id(rs.getInt(1));
+				skills.setSkills(rs.getString(2));
+				skills.setCertification(rs.getString(3));
+				skills.setTeaching_hours(rs.getInt(4));
+				skills.setTrained_no_of_stdnts(rs.getInt(5));
+				skills.setSkill_rating(rs.getInt(6));
+				skills.setTrained_no_of_stdnts(rs.getInt(7));
+				skills.setYrs_of_expr(rs.getInt(8));
+				skills.setLang_known(rs.getString(9));
+				//rs.getInt(1),rs.getString(2),rs.getString(3), rs.getInt(4),rs.getInt(5),rs.getInt(6), rs.getInt(7), rs.getInt(8),rs.getString(9));
+				skillList.add(skills);
+			}
+			
+			
+			rs.close(); db.close();
+		}               
+		catch(SQLException exe)
+		{
+		exe.printStackTrace();	
+		}
+		
+		System.out.println(skillList.size()+"...............");
+		return skillList;
+
+	
+	}  
 		
 		// TODO Auto-generated method stub
 		//return null;
