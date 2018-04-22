@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -19,6 +20,8 @@ import model.User;
 @Controller
 @RequestMapping("/")
 public class HelloController {
+
+
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String printHello(Locale locale, Model model)
@@ -40,6 +43,8 @@ public class HelloController {
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public String user(@Validated User user, Model model) {
 		System.out.println("User Page Requested");
+	
+		
 		model.addAttribute("userName", user.getUserName());
 		return "user";
 	}
