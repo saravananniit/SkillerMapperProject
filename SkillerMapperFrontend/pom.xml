@@ -10,8 +10,7 @@
   <dependencies>
   
   <dependency>
-  
-  <groupId>com.niit</groupId>
+    <groupId>com.niit</groupId>
   <artifactId>SkillmapperBackend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   </dependency>
