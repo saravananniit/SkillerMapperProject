@@ -15,7 +15,7 @@ public class AppConfig {
 			
 			public String sayHello() {
 				// TODO Auto-generated method stub
-				return "hello";
+				return "welcome to spring";
 			}
 		};
 	}
