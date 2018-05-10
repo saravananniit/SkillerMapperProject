@@ -33,8 +33,8 @@ public class EmployeeTest {
 
 	@Before
 	public void setUp() throws Exception {
-	
-		/*if(employeeService.findEmployeesByName("Ryan")!=null) {
+	/*
+		if(employeeService.findEmployeesByName("Ryan")!=null) {
 			employeeService.deleteEmployee(employeeService.findEmployeesByName("Ryan").getEmpId());
 		}
 		

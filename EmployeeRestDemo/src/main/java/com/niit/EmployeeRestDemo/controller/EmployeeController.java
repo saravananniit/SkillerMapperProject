@@ -28,7 +28,7 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 	
-/*	@GetMapping
+	@GetMapping
 	public List<Employee> listAllEmployees() {
 		
 		
@@ -36,8 +36,9 @@ public class EmployeeController {
 		//, HttpStatus.CREATED);
 		  return employee;
 	}
-	*/
 	
+	
+	/*
 	@GetMapping
 	public ResponseEntity<List<Employee>>  listAllEmployees() {
 		
@@ -47,6 +48,7 @@ public class EmployeeController {
 		//, HttpStatus.CREATED);
 		  //return employee;
 	}
+	*/
 	
 	@GetMapping("/{empId}")
 	public ResponseEntity<Employee> getEmployee(@PathVariable("empId") int empId) {
