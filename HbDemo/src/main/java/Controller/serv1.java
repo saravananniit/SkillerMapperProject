@@ -55,11 +55,7 @@ public class serv1 extends HttpServlet {
 						sess.save(emp);
 			tran.commit();
 					
-                 // response.getWriter().append(name);
-
-                 // response.getWriter().append(password);
-
-                  response.getWriter().append("Served at: ").append(request.getContextPath());
+            response.getWriter().append("Served at: ").append(request.getContextPath());
             response.getWriter().append("done");
             
             Query q=sess.createQuery("from Employee");
