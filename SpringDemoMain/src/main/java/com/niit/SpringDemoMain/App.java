@@ -13,10 +13,10 @@ public class App
     {
      //   System.out.println( "Hello World!" );
         
-        
-        AbstractApplicationContext ctx=new   AnnotationConfigApplicationContext(AppConfig.class);
-       HelloWorld h= (HelloWorld)ctx.getBean("helloworld");
-    System.out.println(h.sayHello());
+ AbstractApplicationContext ctx=new   
+		 AnnotationConfigApplicationContext(AppConfig.class);
+ HelloWorld h= (HelloWorld)ctx.getBean("helloworld");
+ System.out.println(h.sayHello());
     
     }
 }

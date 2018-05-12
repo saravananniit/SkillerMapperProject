@@ -11,13 +11,23 @@ public class AppConfig {
 	@Bean(name="helloworld")
 	public HelloWorld getHelloworld()
 	{
+		
 		return new HelloWorld() {
+			
+			@Override
+			public String sayHello() {
+				// TODO Auto-generated method stub
+				return "welcome to Spring application";
+			}
+		};
+		/*return new HelloWorld() {
 			
 			public String sayHello() {
 				// TODO Auto-generated method stub
 				return "welcome to spring";
 			}
 		};
+	*/
 	}
 }
 	
