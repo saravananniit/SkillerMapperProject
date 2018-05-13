@@ -69,7 +69,7 @@ public class EmployeeTest {
 
 	
 	}
-
+/*
 	@Test
 	public void testAddEmployee() {
 		
@@ -80,8 +80,21 @@ public class EmployeeTest {
 		assertEquals(true, employeeService.addEmployee(emp));
 				
 	}
-	
-/*	@Test //(expected=ConstraintViolationException.class)
+
+*/
+	@Test
+	public void testupdateEmployee() {
+		
+		Employee emp=new Employee();
+		emp.setName("Ryas34");
+		emp.setEmail("rn@gmail.com");
+		emp.setEmpid(1);
+		assertEquals(true, employeeService.updateEmployee(emp));
+				
+	}
+
+
+	@Test //(expected=ConstraintViolationException.class)
 	public void testAddEmployeeFailure() {
 		
 		Employee emp=new Employee();
@@ -91,7 +104,7 @@ public class EmployeeTest {
 		assertEquals(true, employeeService.addEmployee(emp));
 				
 	}
-
 */
+
 
 }

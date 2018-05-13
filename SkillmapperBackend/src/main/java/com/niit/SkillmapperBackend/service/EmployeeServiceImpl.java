@@ -31,7 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	public boolean addEmployee(Employee employee) {
 		
-		if(employeeDAO.findById(employee.getEmpId())!=null) {
+		if(employeeDAO.findById(employee.getEmpid())!=null) {
 			return false;
 		}
 		else {
@@ -41,8 +41,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	public boolean updateEmployee(Employee employee) {
-		if(employeeDAO.findById(employee.getEmpId())!=null) {	
+//		int employee_id=employee.getEmpId();
+		if(employeeDAO.findById(employee.getEmpid())!=null) {	
+		
 			employeeDAO.updateEmployee(employee);
+		
+	System.out.println("inside udpate");
 			return true;
 		}
 		else {

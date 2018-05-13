@@ -11,13 +11,19 @@ import javax.persistence.UniqueConstraint;
 import org.springframework.lang.NonNull;
 
 @Entity
-@Table(name="emp100")
+@Table(name="employee")
 public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int empId;
+	private int empid;
 	
+	public int getEmpid() {
+		return empid;
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
 	@NonNull
 	private String name;
 	
@@ -25,12 +31,7 @@ public class Employee {
 	@Column(name="email",unique=true)
 	private String email;
 	
-	public int getEmpId() {
-		return empId;
-	}
-	public void setEmpId(int empId) {
-		this.empId = empId;
-	}
+	
 	public String getName() {
 		return name;
 	}

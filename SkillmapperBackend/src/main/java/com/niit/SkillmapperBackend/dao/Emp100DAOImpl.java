@@ -50,6 +50,7 @@ public class Emp100DAOImpl implements Emp100DAO {
 	public boolean addEmployee(Employee employee) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(employee);
+	//	sessionFactory.getCurrentSession().evict(employee);
 		return true;
 
 		
@@ -58,8 +59,10 @@ public class Emp100DAOImpl implements Emp100DAO {
 
 	public boolean updateEmployee(Employee employee) {
 		// TODO Auto-generated method stub
+	//	sessionFactory.getCurrentSession().evict(employee);
+		
 		sessionFactory.getCurrentSession().update(employee);
-		return true;
+				return true;
 
 		
 //		return false;
@@ -74,4 +77,6 @@ public class Emp100DAOImpl implements Emp100DAO {
 		//	return false;
 	}
 
+	
+	
 }

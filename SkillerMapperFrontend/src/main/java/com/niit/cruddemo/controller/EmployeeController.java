@@ -27,7 +27,7 @@ public class EmployeeController {
 	@PostMapping("/employee/add")
 	public String addEmployee(@ModelAttribute("employee") Employee employee) {
 		
-		if(employee.getEmpId()==0) {
+		if(employee.getEmpid()==0) {
 			employeeService.addEmployee(employee);
 		}
 		else {
