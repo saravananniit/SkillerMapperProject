@@ -61,7 +61,7 @@ public class Emp100DAOImpl implements Emp100DAO {
 		// TODO Auto-generated method stub
 	//	sessionFactory.getCurrentSession().evict(employee);
 		
-		sessionFactory.getCurrentSession().update(employee);
+		sessionFactory.getCurrentSession().saveOrUpdate(employee);
 				return true;
 
 		

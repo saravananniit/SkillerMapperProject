@@ -11,11 +11,10 @@ import javax.persistence.UniqueConstraint;
 import org.springframework.lang.NonNull;
 
 @Entity
-@Table(name="employee")
+@Table(name="emp101")
 public class Employee {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int empid;
 	
 	public int getEmpid() {

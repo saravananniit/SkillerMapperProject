@@ -33,6 +33,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/GIT/SkillmapperBackend/target/SkillmapperBackend-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/GIT/SkillmapperBackend/target/SkillmapperBackend-0.0.1-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

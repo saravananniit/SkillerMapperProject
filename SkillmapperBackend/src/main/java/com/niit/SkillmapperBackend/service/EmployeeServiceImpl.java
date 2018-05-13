@@ -31,27 +31,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	public boolean addEmployee(Employee employee) {
 		
-		if(employeeDAO.findById(employee.getEmpid())!=null) {
-			return false;
-		}
-		else {
 			employeeDAO.addEmployee(employee);
 			return true;
 		}
-	}
+	
 
 	public boolean updateEmployee(Employee employee) {
 //		int employee_id=employee.getEmpId();
-		if(employeeDAO.findById(employee.getEmpid())!=null) {	
+	//	if(employeeDAO.findById(employee.getEmpid())!=null) {	
 		
 			employeeDAO.updateEmployee(employee);
 		
 	System.out.println("inside udpate");
 			return true;
-		}
-		else {
-			return false;
-		}
+		//}
+	//	else {
+		//	return false;
+		//}
 	}
 
 	public boolean deleteEmployee(int empId) {

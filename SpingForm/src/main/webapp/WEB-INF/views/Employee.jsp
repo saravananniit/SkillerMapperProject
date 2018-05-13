@@ -17,25 +17,20 @@
 	Add an Employee
 	</h1>
 	
-	
-	
 	<c:url var="addAction" value="/employee/add" ></c:url>
 	
 	<form:form action="${addAction}" modelAttribute="employee">
 	<table>
-	<c:if test="${!empty employee.name}">
 	<tr>
 	<td>
-	<form:label path="empId">
+	<form:label path="empid">
 	<spring:message text="empId"/>
 	</form:label>
 	</td>
 	<td>
-	<form:input path="empId" readonly="true" size="8" disabled="true" />
-	<form:hidden path="empId" />
+	<form:input path="empid"  size="8"  />
 	</td> 
 	</tr>
-	</c:if>
 	<tr>
 	<td>
 	<form:label path="name">
@@ -83,11 +78,11 @@
 	</tr>
 	<c:forEach items="${employees}" var="employee">
 	<tr>
-	<td>${employee.empId}</td>
+	<td>${employee.empid}</td>
 	<td>${employee.name}</td>
 	<td>${employee.email}</td>
-	<td><a href="<c:url value='/edit/${employee.empId}' />" >Edit</a></td>
-	<td><a href="<c:url value='/remove/${employee.empId}' />" >Delete</a></td>
+	<td><a href="<c:url value='/edit/${employee.empid}' />" >Edit</a></td>
+	<td><a href="<c:url value='/remove/${employee.empid}' />" >Delete</a></td>
 	</tr>
 	</c:forEach>
 	</table>
