@@ -18,13 +18,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .withUser("ad1").password("admin123").roles("USER");
       auth.inMemoryAuthentication().withUser("ad2").password("admin123").roles("USER");
       auth.inMemoryAuthentication().withUser("ad3").password("admin123").roles("USER");
+   
    }
 
    @Override
    protected void configure(HttpSecurity http) throws Exception {
       http.authorizeRequests().antMatchers("/").hasRole("USER")
       .and()
-      //.httpBasic();
+     // .httpBasic();
       .formLogin();
    }
    

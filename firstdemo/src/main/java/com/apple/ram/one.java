@@ -40,7 +40,7 @@ public class one extends HttpServlet {
 		Class.forName("org.h2.Driver");
 			connection = DriverManager.getConnection("jdbc:h2:tcp://localhost/./sample/test", "sa", "");
 			statement = connection.createStatement();
-			String query="insert into test values(907,'rama')";
+			String query="insert into test values(896,'rama')";
 			
 			statement.execute(query);
 			System.out.println("sucess");

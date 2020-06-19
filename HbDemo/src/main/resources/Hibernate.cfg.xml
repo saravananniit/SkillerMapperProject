@@ -9,7 +9,7 @@
 
 <property name="hibernate.connection.driver_class">org.h2.Driver</property>
 
-<property name="hibernate.connection.url">jdbc:h2:tcp://localhost/./sample/niit</property>
+<property name="hibernate.connection.url">jdbc:h2:tcp://localhost/~/test</property>
 <property name="hibernate.connection.username">sa</property>
 <property name="hibernate.connection.password">sa</property>
 <mapping class="Model.Employee"></mapping>

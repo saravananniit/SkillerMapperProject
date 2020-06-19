@@ -79,18 +79,18 @@ public class EmployeeTest {
 	}
 */
 	
-	/*
+	
 	@Test
 	public void testAddEmployee() {
 		
 		Employee emp=new Employee();
-		emp.setName("Ryas");
-		emp.setEmail("rn@gmail.com");
-		emp.setEmpid(1);
+		emp.setName("as");
+		emp.setEmail("n@gmail.com");
+		emp.setEmpid(101);
 		assertEquals(true, employeeService.addEmployee(emp));
 				
 	}
-*/
+
 	/*
 	
 	@Test

@@ -18,7 +18,7 @@ public class testing {
 		Class.forName("org.h2.Driver");
 			connection = DriverManager.getConnection("jdbc:h2:tcp://localhost/./sample/test", "sa", "");
 			statement = connection.createStatement();
-			String query="insert into test values(568,'rama')";
+			String query="insert into test values(899,'ramas')";
 			//resultSet = statement.executeQuery("SELECT EMPNAME FROM EMPLOYEEDETAILS");
 			//while (resultSet.next()) {
 				//System.out.println("EMPLOYEE NAME:"
